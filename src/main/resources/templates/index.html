@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery-3.5.1.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('#btn').click(function () {
+
+                $.get("/get/1", function (data, status) {
+                    var d = document.getElementById("testId");
+                    d.innerHTML = data.name;
+                });
+
+            })
+        });
+
+    </script>
+</head>
+<body>
+<input type="button" id="btn">
+
+<p id="testId"></p>
+
+</body>
+</html>
