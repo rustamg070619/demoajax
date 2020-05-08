@@ -17,7 +17,7 @@ public class FirstController {
     @PostMapping("/save")
     public String save(@RequestBody Login email) {
         loginService.save(email);
-        return "redirect:/all";
+        return "redirect:/";
     }
 
     @GetMapping("/get/{id}")
